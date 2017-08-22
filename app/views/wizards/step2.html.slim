@@ -1,0 +1,10 @@
+ul
+  li= link_to "Passo 1", step1_wizard_path
+  li
+    b Passo 2
+  li Passo 3
+= render "errors"
+= form_for @wizard, url: perform_step_wizard_path do |f|
+  = hidden_field_tag :current_step, @wizard.current_step
+  = f.email_field :email, placeholder: "Email"
+  = f.submit "Próximo"

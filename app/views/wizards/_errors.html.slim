@@ -1,0 +1,5 @@
+- if @wizard.errors.any?
+  ul
+    - @wizard.errors.full_messages.each do |error|
+      li= error
+

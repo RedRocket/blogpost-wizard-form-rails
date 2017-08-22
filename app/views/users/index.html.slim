@@ -1,0 +1,12 @@
+= link_to "Novo usuário", step1_wizard_path
+table
+  thead
+    th Usuario
+    th Email
+    th Endereço
+  tbody
+    - @users.each do |user|
+      tr
+        td= user.username
+        td= user.email
+        td= user.address
